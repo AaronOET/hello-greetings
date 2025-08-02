@@ -69,7 +69,7 @@ jobs:
         echo "See [CHANGELOG.md](https://github.com/${{ github.repository }}/blob/main/CHANGELOG.md) for detailed changes." >> release_notes.md
 
     - name: Update Release
-      uses: actions/github-script@v6
+      uses: actions/github-script@v7
       with:
         script: |
           const fs = require('fs');
