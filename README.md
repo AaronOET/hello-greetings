@@ -18,7 +18,7 @@ pip install hello-greetings
 
 ```bash
 # Greet a specific name
-hello-greetings World
+hello-greetings world
 
 # Interactive mode (prompts for input)
 hello-greetings
