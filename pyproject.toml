@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "hello-greetings"
-version = "1.3.0"
+version = "1.4.0"
 description = "A simple command line tool that greets the user"
 readme = "README.md"
 license = {file = "LICENSE"}

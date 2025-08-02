@@ -12,7 +12,7 @@ from hello_greetings.cli import main
 
 def test_main_with_argument(capsys):
     """Test main function with a command line argument."""
-    with patch.object(sys, "argv", ["halo", "World"]):
+    with patch.object(sys, "argv", ["hello-greetings", "World"]):
         main()
         captured = capsys.readouterr()
         assert captured.out.strip() == "hello World"
@@ -20,7 +20,7 @@ def test_main_with_argument(capsys):
 
 def test_main_with_interactive_input(capsys):
     """Test main function with interactive input."""
-    with patch.object(sys, "argv", ["halo"]):
+    with patch.object(sys, "argv", ["hello-greetings"]):
         with patch("builtins.input", return_value="Universe"):
             main()
             captured = capsys.readouterr()
@@ -29,7 +29,7 @@ def test_main_with_interactive_input(capsys):
 
 def test_main_keyboard_interrupt():
     """Test main function handles keyboard interrupt gracefully."""
-    with patch.object(sys, "argv", ["halo"]):
+    with patch.object(sys, "argv", ["hello-greetings"]):
         with patch("builtins.input", side_effect=KeyboardInterrupt):
             with pytest.raises(SystemExit) as exc_info:
                 main()
