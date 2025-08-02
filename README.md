@@ -1,15 +1,15 @@
-# Halo
+# Hello Greetings
 
 A simple command line tool that greets the user.
 
 ## Description
 
-Halo is a lightweight CLI tool that provides interactive greetings. It can accept names as command line arguments or prompt for input interactively.
+Hello Greetings is a lightweight CLI tool that provides interactive greetings. It can accept names as command line arguments or prompt for input interactively.
 
 ## Installation
 
 ```bash
-pip install halo
+pip install hello-greetings
 ```
 
 ## Usage
@@ -18,25 +18,25 @@ pip install halo
 
 ```bash
 # Greet a specific name
-halo World
+hello-greetings World
 
 # Interactive mode (prompts for input)
-halo
+hello-greetings
 
 # Show version
-halo --version
+hello-greetings --version
 
 # Show help
-halo --help
+hello-greetings --help
 ```
 
 ### Examples
 
 ```bash
-$ halo Python
+$ hello-greetings Python
 hello Python
 
-$ halo
+$ hello-greetings
 Enter something: Universe
 hello Universe
 ```
@@ -58,8 +58,8 @@ hello Universe
 
 ```bash
 # Clone the repository
-git clone https://github.com/AaronOET/halo.git
-cd halo
+git clone https://github.com/AaronOET/hello-greetings.git
+cd hello-greetings
 
 # Install in development mode
 pip install -e .
