@@ -44,7 +44,7 @@ The project uses GitHub Actions for continuous integration and deployment:
 ### Workflows
 
 1. **CI/CD Pipeline** (`.github/workflows/ci.yml`):
-   - Runs tests on Python 3.8-3.12 across Windows, macOS, and Linux
+   - Runs tests on Python 3.9-3.12 across Windows, macOS, and Linux
    - Performs security scans
    - Builds the package
    - Publishes to TestPyPI on main branch pushes

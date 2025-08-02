@@ -3,32 +3,36 @@
 Setup script for the hello-greetings package.
 """
 
-from setuptools import setup, find_packages
 import os
+
+from setuptools import find_packages, setup
+
 
 # Read the README file
 def read_readme():
     """Read the README.md file for the long description."""
     here = os.path.abspath(os.path.dirname(__file__))
-    readme_path = os.path.join(here, 'README.md')
+    readme_path = os.path.join(here, "README.md")
     try:
-        with open(readme_path, 'r', encoding='utf-8') as f:
+        with open(readme_path, "r", encoding="utf-8") as f:
             return f.read()
     except FileNotFoundError:
         return "A simple command line tool that greets the user."
+
 
 # Read the version from the package
 def get_version():
     """Get version from the package __init__.py file."""
     here = os.path.abspath(os.path.dirname(__file__))
-    version_file = os.path.join(here, 'src', 'hello_greetings', '__init__.py')
+    version_file = os.path.join(here, "src", "hello_greetings", "__init__.py")
     version = {}
     try:
-        with open(version_file, 'r', encoding='utf-8') as f:
+        with open(version_file, "r", encoding="utf-8") as f:
             exec(f.read(), version)
-        return version['__version__']
+        return version["__version__"]
     except (FileNotFoundError, KeyError):
         return "1.0.0"
+
 
 setup(
     name="hello-greetings",
@@ -53,7 +57,6 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
         "Programming Language :: Python :: 3.11",
@@ -61,7 +64,7 @@ setup(
         "Topic :: Software Development :: Libraries :: Python Modules",
         "Topic :: Utilities",
     ],
-    python_requires=">=3.8",
+    python_requires=">=3.9",
     install_requires=[
         # Add any runtime dependencies here
         # For example: "requests>=2.25.0",

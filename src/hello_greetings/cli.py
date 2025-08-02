@@ -10,38 +10,33 @@ import sys
 def main():
     """Main function to handle command line arguments and greet the user."""
     parser = argparse.ArgumentParser(
-        description='A simple greeting tool',
-        epilog='Example: halo "World"'
+        description="A simple greeting tool", epilog='Example: halo "World"'
     )
-    
+
     parser.add_argument(
-        'name',
-        nargs='?',  # Makes the argument optional
-        help='The name or thing to greet',
-        default=None
+        "name",
+        nargs="?",  # Makes the argument optional
+        help="The name or thing to greet",
+        default=None,
     )
-    
-    parser.add_argument(
-        '-v', '--version',
-        action='version',
-        version='halo 1.0.0'
-    )
-    
+
+    parser.add_argument("-v", "--version", action="version", version="halo 1.0.0")
+
     args = parser.parse_args()
-    
+
     # If no name provided, ask for input
     if args.name is None:
         try:
-            name = input('Enter something: ')
+            name = input("Enter something: ")
         except KeyboardInterrupt:
             print("\nGoodbye!")
             sys.exit(0)
     else:
         name = args.name
-    
+
     # Print the greeting
-    print(f'hello {name}')
+    print(f"hello {name}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
