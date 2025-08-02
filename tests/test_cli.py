@@ -1,12 +1,11 @@
 """
-Tests for the halo CLI module.
+Tests for the hello_greetings CLI module.
 """
 
 import pytest
 import sys
-from io import StringIO
 from unittest.mock import patch
-from halo.cli import main
+from hello_greetings.cli import main
 
 
 def test_main_with_argument(capsys):
