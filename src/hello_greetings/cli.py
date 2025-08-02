@@ -10,7 +10,7 @@ import sys
 def main():
     """Main function to handle command line arguments and greet the user."""
     parser = argparse.ArgumentParser(
-        description="A simple greeting tool", epilog='Example: halo "World"'
+        description="A simple greeting tool", epilog='Example: hello-greetings "World"'
     )
 
     parser.add_argument(
@@ -20,7 +20,7 @@ def main():
         default=None,
     )
 
-    parser.add_argument("-v", "--version", action="version", version="halo 1.0.0")
+    parser.add_argument("-v", "--version", action="version", version="hello-greetings 1.0.0")
 
     args = parser.parse_args()
 
